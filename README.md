@@ -2,9 +2,17 @@
 
 Marc Harvey - University of Illinois at Urbana/Champaign
 
-webapp that helps abnb owners maximize profits
+---------------------------------------------------------------------------------------------------------------------------------------
+
+This is a Django webapp that helps abnb owners maximize profits
+
+The algorithms for price estimation and bookings optimization are implemented in price_estimation_script.py and bookings_optimization_script.py respectively. Additionally, the other algorithms used to analyze data and such, are also located in python files in the top directory.
+
+---------------------------------------------------------------------------------------------------------------------------------------
 
 My Algorithms:
+
+
 
 Price Estimation
 
@@ -23,6 +31,8 @@ Assumptions
     Next,  compute a weighted average of all of the close abbs, by using the list of close indexes to find the distances (weights) and weekly prices.
     That is the expected price of an ABnB based solely on location and capacity!
 
+
+
 Bookings Optimization
 
 Assumptions
@@ -38,9 +48,9 @@ Assumptions
         While doing this, also form a list of all ABnB prices on the specified day
      Then, find the lowest price out of all the close ABnBs, and that is considered the bookings optimizing price.
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
 Comments/Concerns
-
-
 
 It needs to be said that the runtime complexity is atrocious. I understand that, but at the same time, I feel that my algorithms produce extremely accurate results. I'm sure there are ways to lower the complexity more than I already did (yeah, it was higher :( ), but I believe those changes would edit the fundamental way the algorithms work. In hindsight, I really wanted to add a cache, so that duplicate inputs would work instantly, but I didn't have time. Maybe in the not-so-distant future I'll implement one of those. 
 
@@ -51,6 +61,7 @@ I know my data visualizations are pretty wack, only displaying interesting metri
 
 Another note, some of my assumptions are supported in the informatics section of the site, such as the average abnb price per day graph, which shows why differentiating by day in the booking optimization problem is so important.
 
+---------------------------------------------------------------------------------------------------------------------------------------
 
 CITATIONS (or my attempt at them)
 
