@@ -1,0 +1,2 @@
+Hello! This is a website dedicated to maximizing the profits of AirBnB hosts in the San Fransisco Area. It was created
+for the Capital One Summit challenge.
