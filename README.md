@@ -6,7 +6,7 @@ Marc Harvey - University of Illinois at Urbana/Champaign
 
 This is a Django webapp that helps abnb owners maximize profits. It was made for a mindsumo challenge: https://www.mindsumo.com/contests/airbnb-sf?utm_campaign=solution_received_notification&utm_source=mindsumo&utm_medium=email
 
-NOTE: The algorithms for price estimation and bookings optimization are implemented in price_estimation_script.py and bookings_optimization_script.py respectively. Additionally, the other algorithms used to analyze data and such, are also located in python files in the top directory.
+NOTE: The algorithms for price estimation and bookings optimization are implemented in price_estimation_script.py and bookings_optimization_script.py respectively. Their funcions used on the site are both defined as super_function(), and are both called in the views.py file within their respective app. Additionally, the other algorithms ,used to analyze data and such, are also located in python files in the top directory, and referenced within the views files of their respctive apps.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
