@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>{{ site_name }}</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+<div class="container-fluid" style="min-height:95%; padding-right:3%; padding-left:3%">
+	<br>
+	<div class="row">
+		<h1 class="display-3" style="padding: 2%; ">Investment Strategy</h1>
+	</div>
+	<hr>
+
+	<div class="row">
+		<div class="col-sm-2">
+
+			<div class="btn-group-vertical btn-group-lg" style="padding: 5%;">
+
+				<a class="btn btn-outline-success" href="/" style="background-color: #fff; ">Home</a>
+				<a class="btn btn-outline-success" href="/price_estimation" style="background-color: #fff; ">Price
+					Estimation Tool</a>
+				<a class="btn btn-outline-success" href="/bookings_optimization" style="background-color: #fff; ">Bookings
+					Optimization Tool</a>
+				<a class="btn btn-outline-success" href="/investing" style="background-color: #fff; ">Investment Strategy</a>
+				<a class="btn btn-outline-success" href="/informatics" style="background-color: #fff; ">Informatics</a>
+
+			</div>
+
+		</div>
+
+		<div class="col-sm-5" style="padding-left: 3%; ">
+            <div class="card-deck" style="width: 100%;">
+                <div class="card border-success mb-3">
+					<div class="card-body">
+                        <center><h4 class="card-title">Neighborhood Average Daily Revenue per Bedroom</h4></center>
+                        <div class="row">
+                            <div class="column-sm3" style="padding-right: 20%; padding-left: 15%;">
+                                <p class="card-text">
+                                    Bayview<br>
+                                    Bernal<br>
+                                    Castro/Upper Market<br>
+                                    Chinatown<br>
+                                    Crocker Amazon<br>
+                                    Diamond Heights<br>
+                                    Downtown/Civic Center<br>
+                                    Excelsior<br>
+                                    Financial District<br>
+                                    Glen Park<br>
+                                    Golden Gate Park<br>
+                                    Haight Ashbury<br>
+                                    Inner Richmond<br>
+                                    Inner Sunset<br>
+                                    Lakeshore<br>
+                                    Marina<br>
+                                    Mission<br>
+                                    Nob Hill<br>
+                                    Noe Valley<br>
+                                    North Beach<br>
+                                    Ocean View<br>
+                                    Outer Mission<br>
+                                    Outer Richmond<br>
+                                    Outer Sunset<br>
+                                    Pacific Heights<br>
+                                    Parkside<br>
+                                    Potrero Hill<br>
+                                    Presidio<br>
+                                    Presidio Heights<br>
+                                    Russian Hill<br>
+                                    Seacliff<br>
+                                    South of Market<br>
+                                    Treasure Island/YBI<br>
+                                    Twin Peaks<br>
+                                    Visitacion Valley<br>
+                                    West of Twin Peaks<br>
+                                    Western Addition<br>
+                                </p>
+                            </div>
+
+                            <div class="column-sm3">
+
+                                <p class="card-text">
+                                    {{ Bayviewmon }}<br>
+                                    {{ BernalHeightsmon }}<br>
+                                    {{ CastroUpperMarketmon }}<br>
+                                    {{ Chinatownmon }}<br>
+                                    {{ CrockerAmazonmon }}<br>
+                                    {{ DiamondHeightsmon }}<br>
+                                    {{ DowntownCivicCentermon }}<br>
+                                    {{ Excelsiormon }}<br>
+                                    {{ FinancialDistrictmon }}<br>
+                                    {{ GlenParkmon }}<br>
+                                    {{ GoldenGateParkmon }}<br>
+                                    {{ HaightAshburymon }}<br>
+                                    {{ InnerRichmondmon }}<br>
+                                    {{ InnerSunsetmon }}<br>
+                                    {{ Lakeshoremon }}<br>
+                                    {{ Marinamon }}<br>
+                                    {{ Missionmon }}<br>
+                                    {{ NobHillmon }}<br>
+                                    {{ NoeValleymon }}<br>
+                                    {{ NorthBeachmon }}<br>
+                                    {{ OceanViewmon }}<br>
+                                    {{ OuterMissionmon }}<br>
+                                    {{ OuterRichmondmon }}<br>
+                                    {{ OuterSunsetmon }}<br>
+                                    {{ PacificHeightsmon }}<br>
+                                    {{ Parksidemon }}<br>
+                                    {{ PotreroHillmon }}<br>
+                                    {{ Presidiomon }}<br>
+                                    {{ PresidioHeightsmon }}<br>
+                                    {{ RussianHillmon }}<br>
+                                    {{ Seacliffmon }}<br>
+                                    {{ SouthofMarketmon }}<br>
+                                    {{ TreasureIslandYBImon }}<br>
+                                    {{ TwinPeaksmon }}<br>
+                                    {{ VisitacionValleymon }}<br>
+                                    {{ WestofTwinPeaksmon }}<br>
+                                    {{ WesternAdditionmon }}<br>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-5" style="padding-left: 3%; ">
+            <div class="card-deck" style="width: 100%;">
+                <div class="card border-success mb-3">
+					<div class="card-body">
+                        <h4>The neighborhood with the highest average revenue per bedroom is <strong>
+                            {{ best_neighborhood }}</strong>
+                            with an average daily revenue per bedroom of <strong>{{ best_neighborhood_price }}</strong></h4>
+                        <hr>
+                        <p>
+                            These numbers were made from looking at over 6000 different ABnB listings, and their prices
+                        </p>
+                        <hr>
+                        <p>
+                            It is recommended to invest in <strong>{{ best_neighborhood }}</strong>, because of its high
+                            returns, but this website doesn't have access to exact property values. So, while this
+                            neighborhood may have very high returns, it probably also has very high property values,
+                            which might make it less appealing to invest in. Despite that fact, with the information
+                            given, it is recommended to invest in this neighborhood.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	</div>
+</div>
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+            <a href="#" target="blank">Github Repository</a>
+		</div>
+	</footer>
+
+</body>
+
+</html>

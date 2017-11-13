@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>{{ site_name }}</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+
+	<div class="container-fluid" style="min-height:95%; ">
+
+		<center>
+			<h1 class="display-1" style="padding: 4%; "><span class="badge-pill badge-success">{{ site_name }}</span></h1>
+		</center>
+		<div class="row" style="padding-left: 5%; padding-right: 5%">
+
+			<div class="card-deck">
+				<div class="card border-success mb-3">
+					<div class="card-body">
+						<center><h4 class="card-title">Price Estimation</h4></center>
+						<p class="card-text">{{ pe_info }}</p>
+						<center><a href="/price_estimation" class="btn btn-success">Start</a></center>
+					</div>
+				</div>
+				<div class="card border-success mb-3">
+					<div class="card-body">
+						<center><h4 class="card-title">Bookings Optimization</h4></center>
+						<p class="card-text">{{ bo_info }}</p>
+						<center><a href="/bookings_optimization" class="btn btn-success">Start</a></center>
+					</div>
+				</div>
+				<div class="card border-success mb-3">
+					<div class="card-body">
+						<center><h4 class="card-title">Investment Strategy</h4></center>
+						<p class="card-text">{{ inv_info }}</p>
+						<center><a href="/investing" class="btn btn-success">Start</a></center>
+					</div>
+				</div>
+				<div class="card border-success mb-3">
+					<div class="card-body">
+						<center><h4 class="card-title">Informatics</h4></center>
+						<p class="card-text">{{ inf_info }}</p>
+						<center><a href="/informatics" class="btn btn-success">Go</a></center>
+					</div>
+				</div>
+				<div class="card border-success mb-3">
+					<div class="card-body">
+						<center><h4 class="card-title">About the Project</h4></center>
+						<p class="card-text">{{ about_info }}</p>
+						<center><a href="/about" class="btn btn-success">About</a></center>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row" style="padding-right: 5%; padding-left: 5%; padding-top: 1%; ">
+			<div class="card border-success mb-3">
+				<div class="card-body">
+					<h4 class="alert-heading">{{ greeting }}</h4>
+					<br>
+					<p>{{ main_info }}</p>
+					<hr>
+					<p class="mb-0"><strong>The Price Estimation Tool</strong> shows the expected weekly price of an AirBnB based on
+					location coordinates alone. It is useful for finding out which areas are more pricey than others, or
+					for finding a good weekly price to start an AirBnB at. It uses a distance weighted algorithm, along with
+					Haversine's formula to get extremely accurate results!</p>
+					<hr>
+					<p class="mb-0"><strong>The Bookings Optimization Tool</strong> shows what daily price one can sell at on any given day
+					to make sure the AirBnB gets booked, while still maximizing profit. It is useful for current AirBnBs that aren't
+					producing enough profit due to lack of bookings. It uses a distance weighted algorithm to look at other close ABnBs,
+					and then find what prices they are selling at, so you can sell slightly lower.</p>
+					<hr>
+					<p class="mb-0"><strong>The Investment Strategy Tool</strong> gives a good estimation on where to best invest money
+					in a San Fransisco AirBnB. It finds the average price per airbnb (per bedroom!) for every neighborhood, and finds which
+					neighborhood will produce the highest returns</p>
+					<hr>
+					<p class="mb-0"><strong>Informatics</strong> shows relevant data about the modern AirBnB market. From the neighborhood
+					rating system to which neighborhoods have the highest potential returns, the informatics section has everything you need to
+					own a successful AirBnB</p>
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="/about">About</a> | <a href="#" target="blank">Github Repository</a>
+		</div>
+	</footer>
+
+</body>
+
+</html>
