@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>{{ site_name }}</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+	<div class="container-fluid" style="min-height:95%; padding-right:3%; padding-left:3%">
+		<br>
+		<div class="row">
+			<h1 class="display-3" style="padding: 2%; ">{{ title }}</h1>
+		</div>
+		<hr>
+
+		<div class="row">
+		  <div class="col-sm-2">
+
+			  <div class="btn-group-vertical btn-group-lg" style="padding: 5%;">
+
+					<a class="btn btn-outline-success" href="/" style="background-color: #fff; ">Home</a>
+					<a class="btn btn-outline-success" href="/price_estimation" style="background-color: #fff; ">Price Estimation Tool</a>
+					<a class="btn btn-outline-success" href="/bookings_optimization" style="background-color: #fff; ">Bookings Optimization Tool</a>
+					<a class="btn btn-outline-success" href="/investing" style="background-color: #fff; ">Investment Strategy</a>
+					<a class="btn btn-outline-success" href="/informatics" style="background-color: #fff; ">Informatics</a>
+
+				</div>
+		  </div>
+		  <div class="col-sm-10">
+
+			<div class='container-fluid'>
+			<br><br>
+				<h6><strong>Day in Question:</strong> {{ day }}</h6><br>
+				<h6><strong>ABnB Location:</strong> {{ location }}</h6><br>
+				<h6><strong>ABnB Longitude:</strong> {{ long }}</h6><br>
+				<h6><strong>ABnB Latitude:</strong>  {{ lati }}</h6><br>
+				<h6><strong>ABnB Capacity:</strong>  {{ capacity }} people</h6><hr><br>
+                <h4>ABnB Highest Max-Bookings Price: <span class="badge-pill badge-success">${{ best_price }}</span></h4><br><br>
+				<h6>The big competitors of your AirBnB on {{ day }} are: </h6><br>
+				<ul class="list-unstyled">
+					<li class="media">
+						<img class="mr-3" src="{{ list_pics.0 }}"
+							 alt="If there is no image, the ABnB may not be available anymore" style="width: 10%; ">
+						<div class="media-body">
+							<h5 class="mt-0 mb-1">{{ list_ids.0 }}</h5>
+							Price on Day: ${{ list_prices.0 }}<br>
+							<a href="{{ list_urls.0 }}">Check it out</a>
+						</div>
+					</li><br>
+					<li class="media">
+						<img class="mr-3" src="{{ list_pics.1 }}"
+							 alt="If there is no image, the ABnB may not be available anymore" style="width: 10%; ">
+						<div class="media-body">
+							<h5 class="mt-0 mb-1">{{ list_ids.1 }}</h5>
+							Price on Day: ${{ list_prices.1 }}<br>
+							<a href="{{ list_urls.1 }}">Check it out</a>
+						</div>
+					</li><br>
+					<li class="media">
+						<img class="mr-3" src="{{ list_pics.2 }}"
+							 alt="If there is no image, the ABnB may not be available anymore" style="width: 10%; ">
+						<div class="media-body">
+							<h5 class="mt-0 mb-1">{{ list_ids.2 }}</h5>
+							Price on Day: ${{ list_prices.2 }}<br>
+							<a href="{{ list_urls.2 }}">Check it out</a>
+						</div>
+					</li><br>
+					<li class="media">
+						<img class="mr-3" src="{{ list_pics.3 }}"
+							 alt="If there is no image, the ABnB may not be available anymore" style="width: 10%; ">
+						<div class="media-body">
+							<h5 class="mt-0 mb-1">{{ list_ids.3 }}</h5>
+							Price on Day: ${{ list_prices.3 }}<br>
+							<a href="{{ list_urls.3 }}">Check it out</a>
+						</div>
+					</li><br>
+					<li class="media">
+						<img class="mr-3" src="{{ list_pics.4 }}"
+							 alt="If there is no image, the ABnB may not be available anymore" style="width: 10%; ">
+						<div class="media-body">
+							<h5 class="mt-0 mb-1">{{ list_ids.4 }}</h5>
+							Price on Day: ${{ list_prices.4 }}<br>
+							<a href="{{ list_urls.4 }}">Check it out</a>
+						</div>
+					</li><br>
+				</ul>
+
+				<br>
+			</div>
+		  </div>
+		</div>
+
+
+	</div>
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="/about">About</a> | <a href="#" target="blank">Github Repository</a>
+		</div>
+	</footer>
+
+</body>
+
+</html>
