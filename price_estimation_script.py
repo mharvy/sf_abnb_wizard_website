@@ -251,3 +251,23 @@ def super_function(listings_file, user_long, user_lati, user_capacity, accuracy)
     answer = numerator / denominator
 
     return answer, list_ids, list_prices, list_urls, list_pics
+
+
+# NEW WORK 12 24 17
+# creating  class wil drastically minimize the lines required for this program, as well as will teach me an important
+# lesson.
+# to make the efficiency better or whatever, this definitely needs a recursive function
+
+class abnb():
+
+    def __init__(self, line):
+        self.id = line[0]
+        self.lati = line[48]
+        self.long = line[49]
+        self.capacity = line[53]
+        self.url = line[1]
+        self.pic = line[17]
+        if len(line[61]) > 0:
+            self.price = line[61]
+        else:
+            self.price = line[60] * 7
